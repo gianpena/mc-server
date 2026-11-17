@@ -1,0 +1,14 @@
+services:
+  minecraft-server:
+    build: .
+    image: mc-server:latest
+    container_name: server
+    ports:
+      - "25565:25565"
+    volumes:
+      - world:/server/world
+
+
+volumes:
+  world:
+    name: "mc-world"
